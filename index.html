@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mundial FIFA 2026</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#001f54,#004aad);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+nav{
+    background:#002b80;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    color:#002b80;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#004aad;
+    margin-bottom:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:#004aad;
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-radius:15px;
+}
+
+.stat h2{
+    font-size:2.5rem;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+table th{
+    background:#004aad;
+    color:white;
+}
+
+footer{
+    background:#001f54;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚽ FIFA World Cup 2026</h1>
+    <p>La Copa Mundial más grande de la historia</p>
+</header>
+
+<nav>
+    <a href="#info">Información</a>
+    <a href="#sedes">Sedes</a>
+    <a href="#estadisticas">Estadísticas</a>
+</nav>
+
+<section id="info">
+    <h2 class="section-title">Información General</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌎 Países Anfitriones</h3>
+            <p>Estados Unidos, México y Canadá organizarán conjuntamente el torneo.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Formato Histórico</h3>
+            <p>Será el primer Mundial con 48 selecciones participantes.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚽ Más Partidos</h3>
+            <p>Se disputarán 104 encuentros durante la competición.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎉 Innovación</h3>
+            <p>Será el primer Mundial organizado por tres países al mismo tiempo.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="estadisticas">
+    <h2 class="section-title">Estadísticas del Mundial 2026</h2>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h2>48</h2>
+            <p>Selecciones</p>
+        </div>
+
+        <div class="stat">
+            <h2>104</h2>
+            <p>Partidos</p>
+        </div>
+
+        <div class="stat">
+            <h2>16</h2>
+            <p>Ciudades Sede</p>
+        </div>
+
+        <div class="stat">
+            <h2>3</h2>
+            <p>Países Anfitriones</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="sedes">
+
+    <h2 class="section-title">Países Organizadores</h2>
+
+    <table>
+
+        <tr>
+            <th>País</th>
+            <th>Participación</th>
+        </tr>
+
+        <tr>
+            <td>🇺🇸 Estados Unidos</td>
+            <td>Principal anfitrión</td>
+        </tr>
+
+        <tr>
+            <td>🇲🇽 México</td>
+            <td>Tercer Mundial organizado</td>
+        </tr>
+
+        <tr>
+            <td>🇨🇦 Canadá</td>
+            <td>Coanfitrión del torneo</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<footer>
+    <p>Proyecto DevOps - GitHub Pages</p>
+    <p>Desarrollado por Harlem Josue © 2026</p>
+</footer>
+
+</body>
+</html>
