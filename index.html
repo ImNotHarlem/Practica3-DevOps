@@ -6,12 +6,16 @@
 <title>Mundial 2026</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial;
-    background:#0a0f2c;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0b0f2f;
     color:white;
-    scroll-behavior:smooth;
 }
 
 /* HERO */
@@ -21,6 +25,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    text-align:center;
 }
 
 .hero h1{
@@ -32,27 +37,33 @@ body{
 
 /* NAV */
 nav{
-    position:sticky;
-    top:0;
     background:#000;
     padding:15px;
     text-align:center;
+    position:sticky;
+    top:0;
 }
 
 nav a{
     color:white;
     margin:0 15px;
     text-decoration:none;
+    font-weight:bold;
 }
 
-/* SECTIONS */
+/* SECCIONES */
 section{
     padding:60px 20px;
     max-width:1200px;
     margin:auto;
 }
 
-/* CARDS */
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* TARJETAS */
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -81,7 +92,30 @@ section{
     transform:translateY(-10px);
 }
 
-/* COUNTDOWN */
+.card h3{
+    padding:15px;
+    text-align:center;
+}
+
+/* GALERÍA */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.1);
+}
+
+/* CONTADOR */
 .countdown{
     display:flex;
     justify-content:center;
@@ -89,18 +123,7 @@ section{
     font-size:2rem;
 }
 
-/* ANIMACIÓN */
-.fade{
-    opacity:0;
-    transform:translateY(20px);
-    transition:1s;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
+/* FOOTER */
 footer{
     background:black;
     text-align:center;
@@ -117,45 +140,63 @@ footer{
 
 <nav>
     <a href="#info">Info</a>
+    <a href="#sedes">Sedes</a>
     <a href="#galeria">Galería</a>
     <a href="#contador">Cuenta atrás</a>
 </nav>
 
-<section id="info" class="fade">
-<h2>🌎 Sobre el Mundial</h2>
-<p>El Mundial 2026 será el más grande de la historia con 48 equipos y 3 países anfitriones.</p>
+<section id="info">
+<h2>🌎 Información</h2>
+<p style="text-align:center;">
+El Mundial 2026 será el más grande de la historia con 48 selecciones,
+104 partidos y será organizado por Estados Unidos, México y Canadá.
+</p>
 </section>
 
-<section id="galeria" class="fade">
-<h2>🔥 Galería</h2>
+<section id="sedes">
+<h2>🏟️ Países anfitriones</h2>
 
 <div class="cards">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a">
+<img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12">
+<h3>🇺🇸 Estados Unidos</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b">
+<img src="https://images.unsplash.com/photo-1581091012184-7c4f0b6a9f2b">
+<h3>🇲🇽 México</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20">
+<img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+<h3>🇨🇦 Canadá</h3>
 </div>
 </div>
 
 </section>
 
-<section id="contador" class="fade">
+<section id="galeria">
+<h2>🔥 Galería</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a">
+<img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b">
+<img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20">
+<img src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402">
+</div>
+
+</section>
+
+<section id="contador">
 <h2>⏳ Cuenta regresiva</h2>
 <div class="countdown" id="countdown"></div>
 </section>
 
 <footer>
-<p>DevOps Project - Harlem Josue</p>
+<p>Proyecto DevOps - Harlem Josue</p>
 </footer>
 
 <script>
-// COUNTDOWN
 const countdown = document.getElementById("countdown");
 const targetDate = new Date("June 8, 2026").getTime();
 
@@ -168,20 +209,6 @@ setInterval(()=>{
 
     countdown.innerHTML = days + " días " + hours + " horas";
 },1000);
-
-// SCROLL ANIMATION
-const elements = document.querySelectorAll(".fade");
-
-window.addEventListener("scroll", ()=>{
-    elements.forEach(el=>{
-        const position = el.getBoundingClientRect().top;
-        const screen = window.innerHeight;
-
-        if(position < screen - 100){
-            el.classList.add("show");
-        }
-    });
-});
 </script>
 
 </body>
