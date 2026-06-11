@@ -3,62 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mundial FIFA 2026</title>
+<title>Mundial 2026</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
 body{
-    background:#f4f6f9;
-    color:#333;
-}
-
-header{
-    background:linear-gradient(135deg,#001f54,#004aad);
+    margin:0;
+    font-family:Arial;
+    background:#0a0f2c;
     color:white;
-    text-align:center;
-    padding:80px 20px;
+    scroll-behavior:smooth;
 }
 
-header h1{
-    font-size:3rem;
-    margin-bottom:15px;
+/* HERO */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-header p{
-    font-size:1.2rem;
+.hero h1{
+    font-size:4rem;
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:10px;
 }
 
+/* NAV */
 nav{
-    background:#002b80;
+    position:sticky;
+    top:0;
+    background:#000;
     padding:15px;
     text-align:center;
 }
 
 nav a{
     color:white;
-    text-decoration:none;
     margin:0 15px;
-    font-weight:bold;
+    text-decoration:none;
 }
 
+/* SECTIONS */
 section{
+    padding:60px 20px;
     max-width:1200px;
     margin:auto;
-    padding:50px 20px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-    color:#002b80;
-}
-
+/* CARDS */
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -66,172 +60,129 @@ section{
 }
 
 .card{
-    background:white;
-    padding:25px;
+    background:#1a1f4a;
     border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.card:hover img{
+    transform:scale(1.2);
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-10px);
 }
 
-.card h3{
-    color:#004aad;
-    margin-bottom:10px;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+/* COUNTDOWN */
+.countdown{
+    display:flex;
+    justify-content:center;
     gap:20px;
+    font-size:2rem;
 }
 
-.stat{
-    background:#004aad;
-    color:white;
-    text-align:center;
-    padding:30px;
-    border-radius:15px;
+/* ANIMACIÓN */
+.fade{
+    opacity:0;
+    transform:translateY(20px);
+    transition:1s;
 }
 
-.stat h2{
-    font-size:2.5rem;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-table th,
-table td{
-    border:1px solid #ddd;
-    padding:12px;
-    text-align:center;
-}
-
-table th{
-    background:#004aad;
-    color:white;
+.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 footer{
-    background:#001f54;
-    color:white;
+    background:black;
     text-align:center;
     padding:20px;
-    margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>⚽ FIFA World Cup 2026</h1>
-    <p>La Copa Mundial más grande de la historia</p>
-</header>
+<div class="hero">
+    <h1>⚽ Mundial 2026</h1>
+</div>
 
 <nav>
-    <a href="#info">Información</a>
-    <a href="#sedes">Sedes</a>
-    <a href="#estadisticas">Estadísticas</a>
+    <a href="#info">Info</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contador">Cuenta atrás</a>
 </nav>
 
-<section id="info">
-    <h2 class="section-title">Información General</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>🌎 Países Anfitriones</h3>
-            <p>Estados Unidos, México y Canadá organizarán conjuntamente el torneo.</p>
-        </div>
-
-        <div class="card">
-            <h3>🏆 Formato Histórico</h3>
-            <p>Será el primer Mundial con 48 selecciones participantes.</p>
-        </div>
-
-        <div class="card">
-            <h3>⚽ Más Partidos</h3>
-            <p>Se disputarán 104 encuentros durante la competición.</p>
-        </div>
-
-        <div class="card">
-            <h3>🎉 Innovación</h3>
-            <p>Será el primer Mundial organizado por tres países al mismo tiempo.</p>
-        </div>
-
-    </div>
+<section id="info" class="fade">
+<h2>🌎 Sobre el Mundial</h2>
+<p>El Mundial 2026 será el más grande de la historia con 48 equipos y 3 países anfitriones.</p>
 </section>
 
-<section id="estadisticas">
-    <h2 class="section-title">Estadísticas del Mundial 2026</h2>
+<section id="galeria" class="fade">
+<h2>🔥 Galería</h2>
 
-    <div class="stats">
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a">
+</div>
 
-        <div class="stat">
-            <h2>48</h2>
-            <p>Selecciones</p>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b">
+</div>
 
-        <div class="stat">
-            <h2>104</h2>
-            <p>Partidos</p>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20">
+</div>
+</div>
 
-        <div class="stat">
-            <h2>16</h2>
-            <p>Ciudades Sede</p>
-        </div>
-
-        <div class="stat">
-            <h2>3</h2>
-            <p>Países Anfitriones</p>
-        </div>
-
-    </div>
 </section>
 
-<section id="sedes">
-
-    <h2 class="section-title">Países Organizadores</h2>
-
-    <table>
-
-        <tr>
-            <th>País</th>
-            <th>Participación</th>
-        </tr>
-
-        <tr>
-            <td>🇺🇸 Estados Unidos</td>
-            <td>Principal anfitrión</td>
-        </tr>
-
-        <tr>
-            <td>🇲🇽 México</td>
-            <td>Tercer Mundial organizado</td>
-        </tr>
-
-        <tr>
-            <td>🇨🇦 Canadá</td>
-            <td>Coanfitrión del torneo</td>
-        </tr>
-
-    </table>
-
+<section id="contador" class="fade">
+<h2>⏳ Cuenta regresiva</h2>
+<div class="countdown" id="countdown"></div>
 </section>
 
 <footer>
-    <p>Proyecto DevOps - GitHub Pages</p>
-    <p>Desarrollado por Harlem Josue © 2026</p>
+<p>DevOps Project - Harlem Josue</p>
 </footer>
+
+<script>
+// COUNTDOWN
+const countdown = document.getElementById("countdown");
+const targetDate = new Date("June 8, 2026").getTime();
+
+setInterval(()=>{
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    const days = Math.floor(diff/(1000*60*60*24));
+    const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+    countdown.innerHTML = days + " días " + hours + " horas";
+},1000);
+
+// SCROLL ANIMATION
+const elements = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", ()=>{
+    elements.forEach(el=>{
+        const position = el.getBoundingClientRect().top;
+        const screen = window.innerHeight;
+
+        if(position < screen - 100){
+            el.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
