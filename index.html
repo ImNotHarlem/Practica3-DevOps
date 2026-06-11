@@ -6,12 +6,16 @@
 <title>Mundial 2026</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial;
-    background:#0a0f2c;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0b0f2f;
     color:white;
-    scroll-behavior:smooth;
 }
 
 /* HERO */
@@ -21,6 +25,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    text-align:center;
 }
 
 .hero h1{
@@ -32,27 +37,33 @@ body{
 
 /* NAV */
 nav{
-    position:sticky;
-    top:0;
     background:#000;
     padding:15px;
     text-align:center;
+    position:sticky;
+    top:0;
 }
 
 nav a{
     color:white;
     margin:0 15px;
     text-decoration:none;
+    font-weight:bold;
 }
 
-/* SECTIONS */
+/* SECCIONES */
 section{
     padding:60px 20px;
     max-width:1200px;
     margin:auto;
 }
 
-/* CARDS */
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* TARJETAS */
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -81,108 +92,124 @@ section{
     transform:translateY(-10px);
 }
 
-/* COUNTDOWN */
-.countdown{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    font-size:2rem;
+.card h3{
+    padding:15px;
+    text-align:center;
 }
 
-/* ANIMACIÓN */
-.fade{
-    opacity:0;
-    transform:translateY(20px);
-    transition:1s;
+/* TEXTO */
+.text{
+    text-align:center;
+    font-size:1.1rem;
+    line-height:1.6;
 }
 
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
+/* FOOTER */
 footer{
     background:black;
     text-align:center;
     padding:20px;
+    margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
-    <h1>⚽ Mundial 2026</h1>
+    <h1>⚽ Mundial FIFA 2026</h1>
 </div>
 
+<!-- NAV -->
 <nav>
-    <a href="#info">Info</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contador">Cuenta atrás</a>
+    <a href="#descripcion">Descripción</a>
+    <a href="#sedes">Sedes</a>
+    <a href="#jugadores">Jugadores</a>
+    <a href="#prediccion">Predicción</a>
 </nav>
 
-<section id="info" class="fade">
-<h2>🌎 Sobre el Mundial</h2>
-<p>El Mundial 2026 será el más grande de la historia con 48 equipos y 3 países anfitriones.</p>
+<!-- DESCRIPCIÓN -->
+<section id="descripcion">
+<h2>🌎 Descripción del Mundial</h2>
+<p class="text">
+La Copa Mundial de la FIFA 2026 será la edición más grande en la historia del fútbol.
+Por primera vez participarán 48 selecciones y se disputarán 104 partidos.
+El torneo será organizado por Estados Unidos, México y Canadá, siendo el primer
+Mundial realizado en tres países. Este evento promete revolucionar el fútbol mundial
+con mayor competitividad, más partidos y un alcance global sin precedentes.
+</p>
 </section>
 
-<section id="galeria" class="fade">
-<h2>🔥 Galería</h2>
+<!-- SEDES -->
+<section id="sedes">
+<h2>🏟️ Países Anfitriones</h2>
 
 <div class="cards">
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a">
+<img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12">
+<h3>🇺🇸 Estados Unidos</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b">
+<img src="https://images.unsplash.com/photo-1581091012184-7c4f0b6a9f2b">
+<h3>🇲🇽 México</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20">
-</div>
+<img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+<h3>🇨🇦 Canadá</h3>
 </div>
 
+</div>
 </section>
 
-<section id="contador" class="fade">
-<h2>⏳ Cuenta regresiva</h2>
-<div class="countdown" id="countdown"></div>
+<!-- JUGADORES -->
+<section id="jugadores">
+<h2>⭐ Jugadores a Seguir</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603297631954-2c3b7a9d0b1c">
+<h3>Kylian Mbappé</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1628891890467-b79a1d1c4f3b">
+<h3>Jude Bellingham</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1">
+<h3>Erling Haaland</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972">
+<h3>Lamine Yamal</h3>
+</div>
+
+</div>
+</section>
+
+<!-- PREDICCION -->
+<section id="prediccion">
+<h2>🏆 Predicción del Mundial</h2>
+<p class="text">
+El Mundial 2026 será altamente competitivo, pero algunas selecciones parten como favoritas.
+Argentina buscará defender su título, mientras que Francia y España llegan con plantillas jóvenes y talentosas.
+Inglaterra también es un candidato fuerte.
+
+<strong>Predicción:</strong> España podría ganar el Mundial debido a su nueva generación de jugadores,
+aunque Argentina y Francia serán rivales muy difíciles.
+</p>
 </section>
 
 <footer>
-<p>DevOps Project - Harlem Josue</p>
+<p>DevOps - Harlem Josue</p>
 </footer>
-
-<script>
-// COUNTDOWN
-const countdown = document.getElementById("countdown");
-const targetDate = new Date("June 8, 2026").getTime();
-
-setInterval(()=>{
-    const now = new Date().getTime();
-    const diff = targetDate - now;
-
-    const days = Math.floor(diff/(1000*60*60*24));
-    const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-
-    countdown.innerHTML = days + " días " + hours + " horas";
-},1000);
-
-// SCROLL ANIMATION
-const elements = document.querySelectorAll(".fade");
-
-window.addEventListener("scroll", ()=>{
-    elements.forEach(el=>{
-        const position = el.getBoundingClientRect().top;
-        const screen = window.innerHeight;
-
-        if(position < screen - 100){
-            el.classList.add("show");
-        }
-    });
-});
-</script>
 
 </body>
 </html>
